@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<title>SHAMITHA DANCE</title>
+
+</font></marquee> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+
+<style>
+body {font-family: "Times New Roman";}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman";
+  letter-spacing: 5px;
+  color:#ff4da6;
+}
+nav.ABOUT .ABOUT,
+nav.ELEMENTS.ELEMENTS,
+nav.VIDEOS .VIDEOS,
+{
+  background-color:#ffe6ff;
+}
+.button{
+	border: none;
+	color:pink;
+	background-color:black;
+	padding: 15px 32px;
+	text-align:center;
+	font-size:16px;
+	margin:5px;
+	width:25%;
+	cursor:pointer;
+	
+}
+
+
+</style>
+
+<style> 
+            #leftbox {
+                float:left; 
+                
+                width:25%;
+                height:280px;
+            }
+           
+            #rightbox{
+                float:right;
+                
+                width:45%;
+                height:280px;
+            }
+			 #centre{
+                float:center;
+                height:800px;
+                
+            }
+            
+        </style> 
+ 
+<body ng-app="myApp">
+
+
+<!-- Navbar (sit on top) -->
+<nav class="{{active}}">
+<div class="w3-top">
+  <div class="w3-bar w3-pink w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#" class="w3-bar-item w3-button">WELCOME TO THE WORLD OF HIP-HOP</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#id1" class="w3-bar-item w3-button ABOUT" ng-click="active='ABOUT'">ABOUT</a>
+      <a href="#id2" class="w3-bar-item w3-button ELEMENTS" ng-click="active='ELEMENTS'">ELEMENTS</a>
+	  <a href="#id3" class="w3-bar-item w3-button VIDEOS" ng-click="active='VIDEOS'">VIDEOS</a>
+      <!--<a href="#id4" class="w3-bar-item w3-button Contact" ng-click="active='Contact'">CONTACT US</a>-->
+      
+    </div>
+  </div>
+</div>
+</nav>
+
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+
+  <!-- HBD Section -->
+  <div class="w3-row w3-padding-64" id="id1">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="HIPHOP.jpg" class="w3-round w3-image w3-opacity-min" alt="HIPHOP" width="600" height="750">
+	 
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">WHAT IS HIP-HOP?</h1><br>
+	  <p>Hip hop or hip-hop is a culture and art movement 
+	  that was created by African Americans, Latino Americans and Caribbean 
+	  Americans in the Bronx, New York City.The origin of the name is often disputed. It is also argued as to 
+	  whether hip hop started in the South or West Bronx.While the term hip hop is often used to refer 
+	  exclusively to hip hop music (including rap),hip hop is characterized by four key elements: "rapping" 
+	  (also called MCing or emceeing), a rhythmic vocal rhyming style (orality); DJing (and turntablism), which is the 
+	  practice of making music with record players and DJ mixers (aural/sound and music creation); b-boying/b-girling/breakdancing(movement/dance); 
+	  and graffiti. Other elements are: hip hop culture and historical knowledge of the movement (intellectual/philosophical); 
+	  beatboxing, a percussive vocal style; street entrepreneurship; hip hop language; and hip hop fashion and style, among others. 
+	  The fifth element, although debated, is commonly considered either street knowledge, hip hop fashion, or beatboxing. 
+	  <a href="https://www.redbull.com/in-en/history-of-hip-hop"><p><h1>CLICK HERE FOR THE HISTORY OF HIP-HOP</h1></a></p></p>
+	  
+         	 
+	  
+      
+    </div>
+  </div>
+  
+  <hr>
+  
+ 
+
+
+  <!-- registration Section -->
+  <div class="w3-row w3-padding-64" id="id2">
+      <body style="background-color:#f9ecf2;">
+     <h1>ELEMENTS OF HIP-HOP</h1>
+	 <a href = "https://www.soulonewyork.com/blog-posts/what-are-the-5-elements-of-hip-hop-2"><p>click here for more info about the elements of Hip Hop</p></a>
+      
+    </body><div id = "leftbox">
+                <h4>BREAK-DANCING</h4>
+				<img src="breaking.jpg"  style="width:250px;height:200px;">
+				<br><br>
+				<h4>DJing</h4>
+				<img src="DJ.jpg" style="width:250px;height:200px;">
+				
+                
+            </div> 
+              
+           
+              
+            <div id = "rightbox">
+               <h4>RAP MUSIC</h4>
+				<img src="rapping.jpg" style="width:250px;height:200px;">
+				<br><br>
+				<h4>GRAFFITI</h4>
+				<img src="graffiti.jpg"  style="width:250px;height:200px;">
+				
+				    
+            </div>
+		 </div>
+		
+		
+
+  <hr>
+  
+ 
+ 
+ <br><br>
+ 
+               
+           
+  
+  
+      <div class="w3-row w3-padding-64" id="id3">
+	  <h2><br><br><br><br>VIDEOS</h2>
+              
+            <div id = "leftbox">
+                <h4>BREAK-DANCING</h4>
+				 <div ng-controller="vdCtrl" class="w3-row w3-padding-64">
+<div class="w3-col m6 w3-padding-large w3-hide-small">
+<iframe width="350" height="350" src={{videosource1}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</iframe>
+</div></div>
+<script>
+var videosource1="dance.mp4";</script>
+</div> 
+              
+           
+              
+            <div id = "rightbox">
+                <h4>RAP MUSIC</h4>
+				<div ng-controller="vd2Ctrl" class="w3-row w3-padding-64">
+<div class="w3-col m6 w3-padding-large w3-hide-small">
+<iframe width="350" height="350" src={{videosource2}}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</iframe>
+</div></div>
+<script>
+var videosource2="music.mp4";
+</script>
+               
+            </div>
+        </div>
+
+<hr>
+<br><br><br><br><br><br>
+  
+
+<script>
+  var app = angular.module("myApp", []); 
+  
+  
+  
+
+ app.controller('vdCtrl',['$scope','$window','$sce', function($scope, $window,$sce){
+$scope.videosource1 = $sce.trustAsResourceUrl(window.videosource1); 
+}]);
+app.controller('vd2Ctrl',['$scope','$window','$sce', function($scope, $window,$sce){
+$scope.videosource2 = $sce.trustAsResourceUrl(window.videosource2); 
+}]);
+
+</script>
+</div>
+
+ <!-- End page content -->
+</div>
+</body>
+</html>
+
